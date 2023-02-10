@@ -20,7 +20,7 @@ plugins:
 - jekyll-seo-tag
 description: >- # this means to ignore newlines until "baseurl:"
   This was the first meetup of Turing AI Fellows and teams. Different researchers presented their work as posters and talks 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  cabrerac
@@ -35,6 +35,7 @@ repository: cabrerac/e-fellows-day-cambridge-2022/
 # Build settings
 markdown: kramdown
 theme: minima
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
