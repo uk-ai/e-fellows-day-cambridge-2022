@@ -13,23 +13,28 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Turing AI Fellows and Teams Day at Cambridge
+email: 
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This was the first meetup of Turing AI Fellows and teams. Different researchers presented their work as posters and talks 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: 
+github_username:  cabrerac
+baseurlsite: "https://cabrerac.github.io/e-fellows-day-cambridge-2022/"
+
+ghub:
+  edit: true
+  repository: e-fellows-day-cambridge-2022
+
+repository: cabrerac/e-fellows-day-cambridge-2022/
 
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
