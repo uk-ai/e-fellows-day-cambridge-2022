@@ -11,7 +11,7 @@ layout: home
 
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'location')">Location</button>
+  <button class="tablinks" onclick="openTab(event, 'location')" id="default_open">Location</button>
   <button class="tablinks" onclick="openTab(event, 'schedule')">Schedule</button>
   <button class="tablinks" onclick="openTab(event, 'participants')">Participants</button>
 </div>
