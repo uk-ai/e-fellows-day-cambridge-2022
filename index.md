@@ -11,12 +11,17 @@ layout: home
 
 <!-- Tab links -->
 <div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'description')" onload="openTab(event, 'description')">Description</button>
   <button class="tablinks" onclick="openTab(event, 'location')" onload="openTab(event, 'location')">Location</button>
   <button class="tablinks" onclick="openTab(event, 'schedule')">Schedule</button>
   <button class="tablinks" onclick="openTab(event, 'participants')">Participants</button>
 </div>
 
 <!-- Tab content -->
+<div id="description" class="tabcontent">
+  <p></p>
+</div>
+
 <div id="location" class="tabcontent">
   <p>Lecture Theatre 2 (LT2)</p>
   <p>William Gates Building</p>
