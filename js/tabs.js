@@ -18,6 +18,3 @@ function openTab(evt, tab_name) {
   document.getElementById(tab_name).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
-// Get the element with id="defaultOpen" and click on it
-openTab(event, "location")
