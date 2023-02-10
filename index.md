@@ -28,7 +28,7 @@ layout: home
 </div>
 
 <div id="schedule" class="tabcontent">
-  <p></p>
+  <iframe src="schedule/schedule.pdf" width="100%" height="500px"></iframe>
 </div>
 
 <div id="participants" class="tabcontent">
