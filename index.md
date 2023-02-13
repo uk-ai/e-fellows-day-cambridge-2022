@@ -11,14 +11,14 @@ layout: home
 
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'description')" onload="openTab(event, 'description')">Description</button>
+  <button class="tablinks active" onclick="openTab(event, 'description')">Description</button>
   <button class="tablinks" onclick="openTab(event, 'location')" onload="openTab(event, 'location')">Location</button>
   <button class="tablinks" onclick="openTab(event, 'schedule')">Schedule</button>
   <button class="tablinks" onclick="openTab(event, 'participants')">Participants</button>
 </div>
 
 <!-- Tab content -->
-<div id="description" class="tabcontent">
+<div id="description" class="tabcontent" style="display: block;">
   <p>This was the first meetup of Turing AI Fellows and teams. Researchers presented their work around ML applications in the form of posters and talks.</p>
 </div>
 
