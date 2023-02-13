@@ -19,7 +19,7 @@ layout: home
 
 <!-- Tab content -->
 <div id="description" class="tabcontent">
-  <p></p>
+  <p>This was the first meetup of Turing AI Fellows and teams. Different researchers presented their work around ML applications as posters and talks.</p>
 </div>
 
 <div id="location" class="tabcontent">
