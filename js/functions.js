@@ -1,5 +1,4 @@
 function open_tab(evt, tab_name) {
-  alert("Inside open tab...");
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -22,7 +21,9 @@ function open_tab(evt, tab_name) {
 
 function show_csv(control_id, file_name){
   var reader = new FileReader();
+  alert("inside show csv...");
   reader.onload = function (e) {
+    alert("inside onload...");
     var table = document.createElement("table");
     var rows = e.target.result.split("\n");
     for (var i = 0; i < rows.length; i++) {
@@ -35,7 +36,7 @@ function show_csv(control_id, file_name){
         }
       }
     }
-    var dvCSV = document.getElementById(control_id);
+    var dvCSV = document.getElementById("participants");
     dvCSV.innerHTML = "";
     dvCSV.appendChild(table);
   }
