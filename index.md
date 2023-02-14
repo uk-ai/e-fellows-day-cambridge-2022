@@ -14,7 +14,7 @@ layout: home
   <button class="tablinks active" onclick="open_tab(event, 'description')">Description</button>
   <button class="tablinks" onclick="open_tab(event, 'location')">Location</button>
   <button class="tablinks" onclick="open_tab(event, 'schedule')">Schedule</button>
-  <button class="tablinks" onclick="open_tab(event, 'participants');show_csv('participants', 'file_participants')">Participants</button>
+  <button class="tablinks" onclick="open_tab(event, 'participants')">Participants</button>
 </div>
 
 <!-- Tab content -->
@@ -34,5 +34,7 @@ layout: home
 </div>
 
 <div id="participants" class="tabcontent">
-  <input type="file" name="participants/participants.csv" id="file_participants" class="visuallyhidden">
+  <object data="https://www.w3.org/TR/PNG/iso_8859-1.txt" width="300" height="200">
+     Not supported
+  </object>
 </div>
