@@ -6,17 +6,15 @@ layout: home
 ---
 <head>
 <link rel="stylesheet" href="css/tabs.css">
-<script src="js/tabs.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="//jquerycsvtotable.googlecode.com/files/jquery.csvToTable.js"></script>
+<script src="js/functions.js"></script>
 </head>
 
 <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks active" onclick="openTab(event, 'description')">Description</button>
-  <button class="tablinks" onclick="openTab(event, 'location')" onload="openTab(event, 'location')">Location</button>
-  <button class="tablinks" onclick="openTab(event, 'schedule')">Schedule</button>
-  <button class="tablinks" onclick="openTab(event, 'participants')">Participants</button>
+  <button class="tablinks active" onclick="open_tab(event, 'description')">Description</button>
+  <button class="tablinks" onclick="open_tab(event, 'location')">Location</button>
+  <button class="tablinks" onclick="open_tab(event, 'schedule')">Schedule</button>
+  <button class="tablinks" onclick="open_tab(event, 'participants'); show_csv('participants', 'participants/participants.csv')">Participants</button>
 </div>
 
 <!-- Tab content -->
@@ -38,9 +36,3 @@ layout: home
 
 <div id="participants" class="tabcontent">
 </div>
-
-<script>
-$(function() {
-  $('#participants').CSVToTable('participants/participants.csv');
-});
-</script>
