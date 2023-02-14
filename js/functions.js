@@ -19,7 +19,7 @@ function open_tab(evt, tab_name) {
   evt.currentTarget.className += " active";
 }
 
-function show_csv(control_id, file_name){
+function show_csv(control_id, file_id){
   var reader = new FileReader();
   alert("inside show csv...");
   reader.onload = function (e) {
@@ -46,5 +46,6 @@ function show_csv(control_id, file_name){
   var dvCSV = document.getElementById(control_id);
   dvCSV.innerHTML = "";
   dvCSV.appendChild(node);
-  reader.readAsText(file_name);
+  file = document.getElementById(file_id);
+  reader.readAsText(file);
 }

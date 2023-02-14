@@ -5,7 +5,7 @@
 layout: home
 ---
 <head>
-<link rel="stylesheet" href="css/tabs.css">
+<link rel="stylesheet" href="css/style.css">
 <script src="js/functions.js"></script>
 </head>
 
@@ -14,7 +14,7 @@ layout: home
   <button class="tablinks active" onclick="open_tab(event, 'description')">Description</button>
   <button class="tablinks" onclick="open_tab(event, 'location')">Location</button>
   <button class="tablinks" onclick="open_tab(event, 'schedule')">Schedule</button>
-  <button class="tablinks" onclick="open_tab(event, 'participants');show_csv('participants', 'participants/participants.csv')">Participants</button>
+  <button class="tablinks" onclick="open_tab(event, 'participants');show_csv('participants', 'file_participants')">Participants</button>
 </div>
 
 <!-- Tab content -->
@@ -34,4 +34,5 @@ layout: home
 </div>
 
 <div id="participants" class="tabcontent">
+  <input type="file" name="participants/participants.csv" id="file_participants" class="visuallyhidden">
 </div>
