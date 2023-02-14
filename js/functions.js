@@ -22,9 +22,7 @@ function open_tab(evt, tab_name) {
 
 function show_csv(control_id, file_name){
   var reader = new FileReader();
-  alert("Inside function...");
   reader.onload = function (e) {
-    alert("Inside onload...");
     var table = document.createElement("table");
     var rows = e.target.result.split("\n");
     for (var i = 0; i < rows.length; i++) {
@@ -41,5 +39,11 @@ function show_csv(control_id, file_name){
     dvCSV.innerHTML = "";
     dvCSV.appendChild(table);
   }
+  const node = document.createElement("li");
+  const textnode = document.createTextNode("Test");
+  node.appendChild(textnode);
+  var dvCSV = document.getElementById(control_id);
+  dvCSV.innerHTML = "";
+  dvCSV.appendChild(node);
   reader.readAsText(file_name);
 }

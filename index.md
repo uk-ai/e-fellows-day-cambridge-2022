@@ -14,7 +14,7 @@ layout: home
   <button class="tablinks active" onclick="open_tab(event, 'description')">Description</button>
   <button class="tablinks" onclick="open_tab(event, 'location')">Location</button>
   <button class="tablinks" onclick="open_tab(event, 'schedule')">Schedule</button>
-  <button class="tablinks" onclick="open_tab(event, 'participants'); show_csv('participants', 'participants/participants.csv')">Participants</button>
+  <button class="tablinks" onclick="open_tab(event, 'participants');show_csv('participants', 'participants/participants.csv')">Participants</button>
 </div>
 
 <!-- Tab content -->
@@ -27,7 +27,6 @@ layout: home
   <p>William Gates Building</p>
   <p>15 JJ Thomson Ave, Cambridge, CB3 0FD</p>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.4608756367845!2d0.09093377127032908!3d52.21084871510938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8774a3e90f6a7%3A0x46f5a17802d7f53b!2sLecture%20Theatre%202%2C%20Cambridge%20CB3%200FD!5e0!3m2!1sen!2suk!4v1676040082729!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  
 </div>
 
 <div id="schedule" class="tabcontent">
