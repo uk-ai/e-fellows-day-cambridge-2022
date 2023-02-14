@@ -1,4 +1,5 @@
 function open_tab(evt, tab_name) {
+  alert("Inside open tab...");
   // Declare all variables
   var i, tabcontent, tablinks;
 
