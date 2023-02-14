@@ -34,5 +34,4 @@ layout: home
 </div>
 
 <div id="participants" class="tabcontent">
-  <iframe src="participants/participants.csv" width="100%" height="100%"></iframe>
 </div>
