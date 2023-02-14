@@ -34,7 +34,5 @@ layout: home
 </div>
 
 <div id="participants" class="tabcontent">
-  <object data="https://www.w3.org/TR/PNG/iso_8859-1.txt" width="300" height="200">
-     Not supported
-  </object>
+  <iframe src="participants/participants.csv" width="100%" height="100%"></iframe>
 </div>
