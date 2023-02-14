@@ -7,6 +7,8 @@ layout: home
 <head>
 <link rel="stylesheet" href="css/tabs.css">
 <script src="js/tabs.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//jquerycsvtotable.googlecode.com/files/jquery.csvToTable.js"></script>
 </head>
 
 <!-- Tab links -->
@@ -35,5 +37,10 @@ layout: home
 </div>
 
 <div id="participants" class="tabcontent">
-  <p></p>
 </div>
+
+<script>
+$(function() {
+  $('#participants').CSVToTable('participants/participants.csv');
+});
+</script>
