@@ -19,32 +19,31 @@ function open_tab(evt, tab_name) {
   evt.currentTarget.className += " active";
 }
 
-function load_file(file_id, div_id){
-  // Load file from iframe
-  alert("inside load file..." + file_id);
-  var file_frame = document.getElementById(file_id);
-  // Read raw contents
-  alert("before reading raw content...");
-  var raw_contents = file_frame.contentWindow.document.body.childNodes[0].innerHTML;
-  alert("middle reading raw content...");
-  var rows = raw_contents.split("\n");
-  alert("after reading raw content...");
-  // Create table element
-  var table = document.createElement("table");
-  // Fill the table
-  alert("filling the table...");
-  for (var i = 0; i < rows.length; i++) {
-    var cells = rows[i].split(",");
-    if (cells.length > 1) {
-      var row = table.insertRow(-1);
-      for (var j = 0; j < cells.length; j++) {
-        var cell = row.insertCell(-1);
-        cell.innerHTML = cells[j];
+function load_file(file_path, div_id){
+  $.ajax({
+    url: file_path,
+    success: function (data){
+      alert("inside ajax function..." + file_id);
+      var rows = raw_contents.split("\n");
+      alert("after reading raw content...");
+      // Create table element
+      var table = document.createElement("table");
+      // Fill the table
+      alert("filling the table...");
+      for (var i = 0; i < rows.length; i++) {
+        var cells = rows[i].split(",");
+        if (cells.length > 1) {
+          var row = table.insertRow(-1);
+          for (var j = 0; j < cells.length; j++) {
+            var cell = row.insertCell(-1);
+            cell.innerHTML = cells[j];
+          }
+        }
       }
+      // Add table to div
+      var dvCSV = document.getElementById(div_id);
+      dvCSV.innerHTML = "";
+      dvCSV.appendChild(table);
     }
-  }
-  // Add table to div
-  var dvCSV = document.getElementById(div_id);
-  dvCSV.innerHTML = "";
-  dvCSV.appendChild(table);
+  });
 }
