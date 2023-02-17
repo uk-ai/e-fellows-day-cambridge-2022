@@ -35,7 +35,7 @@ function load_file(file_path, div_id){
             var row = header.insertRow(0);
             for (var j = 0; j < cells.length; j++) {
               var cell = row.insertCell(-1);
-              cell.innerHTML = cells[j];
+              cell.innerHTML = "<b>" + cells[j] "</b>";
             }
           } else{
             var row = table.insertRow(-1);
