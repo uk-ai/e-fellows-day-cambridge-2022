@@ -14,7 +14,7 @@ layout: home
   <button class="tablinks active" onclick="open_tab(event, 'description')">Description</button>
   <button class="tablinks" onclick="open_tab(event, 'location')">Location</button>
   <button class="tablinks" onclick="open_tab(event, 'schedule')">Schedule</button>
-  <button class="tablinks" onclick="open_tab(event, 'participants'); load_file('participants_file');">Participants</button>
+  <button class="tablinks" onclick="open_tab(event, 'participants'); load_file('participants_file','participants_table');">Participants</button>
 </div>
 
 <!-- Tab content -->
@@ -35,4 +35,5 @@ layout: home
 
 <div id="participants" class="tabcontent">
   <iframe id="participants_file" src="participants/participants.csv" style="display: none;"></iframe>
+  <div id="participants_table"></div>
 </div>
