@@ -22,13 +22,16 @@ function open_tab(evt, tab_name) {
 
 function load_file(file_id, div_id){
   // Load file from iframe
+  alert("inside load file...");
   var file_frame = document.getElementById(file_id);
   // Read raw contents
   var raw_contents = file_frame.contentWindow.document.body.childNodes[0].innerHTML;
   var rows = raw_contents.split("\n");
+  alert("after reading raw content...");
   // Create table element
   var table = document.createElement("table");
   // Fill the table
+  alert("filling the table...");
   for (var i = 0; i < rows.length; i++) {
     var cells = rows[i].split(",");
     if (cells.length > 1) {
