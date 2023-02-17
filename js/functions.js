@@ -21,7 +21,7 @@ function open_tab(evt, tab_name) {
 
 function load_file(file_id, div_id){
   // Load file from iframe
-  alert("inside load file...");
+  alert("inside load file..." + file_id);
   var file_frame = document.getElementById(file_id);
   // Read raw contents
   alert("before reading raw content...");
