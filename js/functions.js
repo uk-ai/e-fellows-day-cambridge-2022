@@ -24,7 +24,9 @@ function load_file(file_id, div_id){
   alert("inside load file...");
   var file_frame = document.getElementById(file_id);
   // Read raw contents
+  alert("before reading raw content...");
   var raw_contents = file_frame.contentWindow.document.body.childNodes[0].innerHTML;
+  alert("middle reading raw content...");
   var rows = raw_contents.split("\n");
   alert("after reading raw content...");
   // Create table element
