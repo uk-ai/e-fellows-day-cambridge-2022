@@ -27,6 +27,7 @@ function load_file(file_path, div_id){
       // Create table element
       var table = document.createElement("table");
       var header = table.createTHead();
+      var body = table.createTBody();
       // Fill the table
       for (var i = 0; i < rows.length; i++) {
         var cells = rows[i].split(",");
@@ -38,7 +39,7 @@ function load_file(file_path, div_id){
               cell.innerHTML = "<b>" + cells[j] + "</b>";
             }
           } else{
-            var row = table.insertRow(-1);
+            var row = body.insertRow(-1);
             for (var j = 0; j < cells.length; j++) {
               var cell = row.insertCell(-1);
               cell.innerHTML = cells[j];
