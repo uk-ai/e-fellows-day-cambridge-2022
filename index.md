@@ -6,8 +6,8 @@ layout: home
 ---
 <head>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
 <script src="js/functions.js"></script>
-<script src="jquery.js"></script>
 </head>
 
 <!-- Tab links -->
