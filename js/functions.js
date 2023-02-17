@@ -19,7 +19,6 @@ function open_tab(evt, tab_name) {
   evt.currentTarget.className += " active";
 }
 
-
 function load_file(file_id, div_id){
   // Load file from iframe
   alert("inside load file...");
