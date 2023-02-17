@@ -19,34 +19,28 @@ function open_tab(evt, tab_name) {
   evt.currentTarget.className += " active";
 }
 
-function show_csv(control_id, file_id){
-  var reader = new FileReader();
-  alert("inside show csv..." + file_id);
-  reader.onload = function (e) {
-    alert("inside onload...");
-    var table = document.createElement("table");
-    var rows = e.target.result.split("\n");
-    for (var i = 0; i < rows.length; i++) {
-      var cells = rows[i].split(",");
-      if (cells.length > 1) {
-        var row = table.insertRow(-1);
-        for (var j = 0; j < cells.length; j++) {
-          var cell = row.insertCell(-1);
-          cell.innerHTML = cells[j];
-        }
+
+function load_file(file_id, div_id){
+  // Load file from iframe
+  var file_frame = document.getElementById(file_id);
+  // Read raw contents
+  var raw_contents = file_frame.contentWindow.document.body.childNodes[0].innerHTML;
+  var rows = raw_contents.split("\n");
+  // Create table element
+  var table = document.createElement("table");
+  // Fill the table
+  for (var i = 0; i < rows.length; i++) {
+    var cells = rows[i].split(",");
+    if (cells.length > 1) {
+      var row = table.insertRow(-1);
+      for (var j = 0; j < cells.length; j++) {
+        var cell = row.insertCell(-1);
+        cell.innerHTML = cells[j];
       }
     }
-    var dvCSV = document.getElementById("participants");
-    dvCSV.innerHTML = "";
-    dvCSV.appendChild(table);
   }
-  //const node = document.createElement("li");
-  //const textnode = document.createTextNode("Test");
-  //node.appendChild(textnode);
-  //var dvCSV = document.getElementById(control_id);
-  //dvCSV.innerHTML = "";
-  //dvCSV.appendChild(node);
-  file = document.getElementById(file_id);
-  alert(file)
-  reader.readAsText(file);
+  // Add table to div
+  var dvCSV = document.getElementById(div_id);
+  dvCSV.innerHTML = "";
+  dvCSV.appendChild(table);
 }
