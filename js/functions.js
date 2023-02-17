@@ -23,20 +23,26 @@ function load_file(file_path, div_id){
   $.ajax({
     url: file_path,
     success: function (data){
-      alert("inside ajax function..." + file_path);
       var rows = data.split("\n");
-      alert("after reading raw content...");
       // Create table element
       var table = document.createElement("table");
+      var header = table.createTHead();
       // Fill the table
-      alert("filling the table...");
       for (var i = 0; i < rows.length; i++) {
         var cells = rows[i].split(",");
         if (cells.length > 1) {
-          var row = table.insertRow(-1);
-          for (var j = 0; j < cells.length; j++) {
-            var cell = row.insertCell(-1);
-            cell.innerHTML = cells[j];
+          if (i == 0){
+            var row = header.insertRow(0);
+            for (var j = 0; j < cells.length; j++) {
+              var cell = row.insertCell(-1);
+              cell.innerHTML = cells[j];
+            }
+          } else{
+            var row = table.insertRow(-1);
+            for (var j = 0; j < cells.length; j++) {
+              var cell = row.insertCell(-1);
+              cell.innerHTML = cells[j];
+            }
           }
         }
       }
