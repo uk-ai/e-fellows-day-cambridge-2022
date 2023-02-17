@@ -23,7 +23,7 @@ function load_file(file_path, div_id){
   $.ajax({
     url: file_path,
     success: function (data){
-      alert("inside ajax function..." + file_id);
+      alert("inside ajax function..." + file_path);
       var rows = raw_contents.split("\n");
       alert("after reading raw content...");
       // Create table element
