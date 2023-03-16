@@ -1,0 +1,8 @@
+hero:
+  title: About Us
+body: |
+  <h4>The UK AI Fellows Conference</h4>
+  <p>This conference is bringing together the UK's Turing Fellows for discussion between them and their research groups.</p>
+partners:
+  - link: 
+    image: /assets/images/university-of-cambridge.png
